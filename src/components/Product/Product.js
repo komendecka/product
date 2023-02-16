@@ -22,6 +22,9 @@ const Product = (props) => {
 
   const getPrice = useMemo(() => {
     const foundSize = props.sizes.find(element => element.name === currentSize)
+    if (!foundSize){
+      return props.basePrice;
+    }
     return props.basePrice + foundSize.additionalPrice;
   }, [props.sizes, props.basePrice, currentSize]
   );
@@ -29,7 +32,6 @@ const Product = (props) => {
   return (
     <article className={styles.product}>
       <ProductImage name={props.name} title={props.title} currentColor={currentColor}/>
-
       <div>
         <header>
           <h2 className={styles.name}>{props.title}</h2>
