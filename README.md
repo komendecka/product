@@ -1,3 +1,12 @@
+Personalizacja produktu - the application that render product views, user will see the t-shirt graphics, title, price, possible options (size and color), as well as a button to add the product to the cart. This button will show a summary of the options selected by the user when clicked.
+Changing these options. 
+Each size has a slightly different price in our store. So resizing updates the price information.
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
